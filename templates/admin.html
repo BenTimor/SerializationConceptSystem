@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Area</title>
+</head>
+<body>
+<center>
+    {% if user and user.is_admin %}
+        <form id="post" method="post" target="#">
+            <input style="width: 75%;" name="title" placeholder="Enter the title here" />
+            <textarea style="width: 75%; min-height: 500px;" form="post" name="content"></textarea>
+            <input type="submit">
+        </form>
+    {% else %}
+        <h1> You're not admin </h1>
+    {% endif %}
+</center>
+</body>
+</html>
